@@ -768,7 +768,7 @@ function Library:create(options)
 		Theme = {BackgroundColor3 = {"Secondary", 10}},
 		AnchorPoint = Vector2.new(0, 0.5),
 		Position = UDim2.new(0, 10, 0.5),
-		Size = UDim2.fromOffset(80, 80)
+		Size = UDim2.fromOffset(50, 80)
 	}):round(100)
 
 	local displayName; do
@@ -787,9 +787,12 @@ function Library:create(options)
 		})
 		Library.DisplayName = displayName
 	end
-
+    
+    if _G.MAP == nil or _G.MAP == false then
+        _G.MAP = "Blox Fruit"
+    end
 	local profileName = profile:object("TextLabel", {
-		Text = "@" .. LocalPlayer.Name,
+		Text = _G.MAP,
 		TextScaled = true,
 		Position = UDim2.new(0, 105,0, 47),
 		Theme = {TextColor3 = "Tertiary"},
