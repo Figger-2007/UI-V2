@@ -50,7 +50,7 @@ local Library = {
 		Dark = {
 			Main = Color3.fromRGB(30, 30, 35),
 			Secondary = Color3.fromRGB(50, 50, 55),
-			Tertiary = Color3.fromRGB(70, 130, 180),
+			Tertiary = Color3.fromRGB(0, 255, 176),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
@@ -117,8 +117,8 @@ end
 
 function Library:change_theme(toTheme)
 	Library.CurrentTheme = toTheme
-	local c = self:lighten(toTheme.Tertiary, 10)
-	Library.DisplayName.Text = "Liver Hub , <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. "Blox Fruit" .. "</b> </font>"
+	local c = self:lighten(toTheme.Tertiary, 20)
+	Library.DisplayName.Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>"
 	for color, objects in next, Library.ThemeObjects do
 		local themeColor = Library.CurrentTheme[color]
 		for _, obj in next, objects do
@@ -764,7 +764,7 @@ function Library:create(options)
 	}):round(7)
 
 	local profilePictureContainer = profile:object("ImageLabel", {
-		Image = "http://www.roblox.com/asset/?id=8987392618",
+		Image = Players:GetUserThumbnailAsync(LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100),
 		Theme = {BackgroundColor3 = {"Secondary", 10}},
 		AnchorPoint = Vector2.new(0, 0.5),
 		Position = UDim2.new(0, 10, 0.5),
@@ -777,7 +777,7 @@ function Library:create(options)
 
 		local displayName = profile:object("TextLabel", {
 			RichText = true,
-			Text = "<font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. "Liver Hub - Premium" .. "</b> </font>",
+			Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
 			TextScaled = true,
 			Position = UDim2.new(0, 105,0, 10),
 			Theme = {TextColor3 = {"Tertiary", 10}},
@@ -787,12 +787,9 @@ function Library:create(options)
 		})
 		Library.DisplayName = displayName
 	end
-    
-    if _G.MAP == nil or _G.MAP == false then
-        _G.MAP = "Blox Fruit"
-    end
+
 	local profileName = profile:object("TextLabel", {
-		Text = _G.MAP,
+		Text = "@" .. LocalPlayer.Name,
 		TextScaled = true,
 		Position = UDim2.new(0, 105,0, 47),
 		Theme = {TextColor3 = "Tertiary"},
