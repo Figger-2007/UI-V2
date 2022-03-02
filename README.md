@@ -764,7 +764,7 @@ function Library:create(options)
 	}):round(7)
 
 	local profilePictureContainer = profile:object("ImageLabel", {
-		Image = Players:GetUserThumbnailAsync(LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100),
+		Image = "http://www.roblox.com/asset/?id=8987392618",
 		Theme = {BackgroundColor3 = {"Secondary", 10}},
 		AnchorPoint = Vector2.new(0, 0.5),
 		Position = UDim2.new(0, 10, 0.5),
@@ -831,7 +831,7 @@ function Library:create(options)
 		Size = UDim2.fromOffset(24, 24),
 		Position = UDim2.new(1, -10, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
-		Image = "http://www.roblox.com/asset/?id=8987392618"
+		Image = "http://www.roblox.com/asset/?id=8559790237"
 	}):tooltip("settings")
 
 	local creditsTabIcon = profile:object("ImageButton", {
