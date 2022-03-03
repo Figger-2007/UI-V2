@@ -794,7 +794,7 @@ function Library:create(options)
 	local profileName = profile:object("TextLabel", {
 		Text = _G.MAP,
 		TextScaled = true,
-		Position = UDim2.new(0, 111,0, 48),
+		Position = UDim2.new(0, 107,0, 48),
 		Theme = {TextColor3 = "Tertiary"},
 		Size = UDim2.new(0, 400,0, 20),
 		BackgroundTransparency = 1,
@@ -803,7 +803,7 @@ function Library:create(options)
 
 	local timeDisplay = profile:object("TextLabel", {
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0, 111, 1, -10),
+		Position = UDim2.new(0, 107, 1, -10),
 		Size = UDim2.new(0, 400,0, 20),
 		AnchorPoint = Vector2.new(0, 1),
 		Theme = {TextColor3 = {"WeakText", -20}},
