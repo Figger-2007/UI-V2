@@ -831,7 +831,7 @@ function Library:create(options)
 		Size = UDim2.fromOffset(24, 24),
 		Position = UDim2.new(1, -10, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
-		Image = "http://www.roblox.com/asset/?id=8991528059"
+		Image = "http://www.roblox.com/asset/?id=8559790237"
 	}):tooltip("settings")
 
 	local creditsTabIcon = profile:object("ImageButton", {
@@ -840,7 +840,7 @@ function Library:create(options)
 		Size = UDim2.fromOffset(24, 24),
 		Position = UDim2.new(1, -44, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
-		Image = "http://www.roblox.com/asset/?id=8991524713"
+		Image = "http://www.roblox.com/asset/?id=8577523456"
 	}):tooltip("credits")
 
 	local quickAccess = homePage:object("Frame", {
@@ -880,7 +880,7 @@ function Library:create(options)
 	local settingsTab = Library.tab(mt, {
 		Name = "Settings",
 		Internal = settingsTabIcon,
-		Icon = "http://www.roblox.com/asset/?id=8991528059"
+		Icon = "rbxassetid://8559790237"
 	})
 
 	settingsTab:_theme_selector()
@@ -917,7 +917,7 @@ function Library:create(options)
 	local creditsTab = Library.tab(mt, {
 		Name = "Credits",
 		Internal = creditsTabIcon,
-		Icon = "http://www.roblox.com/asset/?id=8991524713"
+		Icon = "http://www.roblox.com/asset/?id=8577523456"
 	})
 
 	rawset(mt, "creditsContainer", creditsTab.container)
