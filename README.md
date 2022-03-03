@@ -779,7 +779,7 @@ function Library:create(options)
 			RichText = true,
 			Text = "<font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. "Liver Hub - Premium" .. "</b> </font>",
 			TextScaled = true, -- 0, 120,0, 48
-			Position = UDim2.new(0, 117,0, 10),
+			Position = UDim2.new(0, 110,0, 10),
 			Theme = {TextColor3 = {"Tertiary", 10}},
 			Size = UDim2.new(0, 400,0, 40),
 			BackgroundTransparency = 1,
