@@ -794,7 +794,7 @@ function Library:create(options)
 	local profileName = profile:object("TextLabel", {
 		Text = _G.MAP,
 		TextScaled = true,
-		Position = UDim2.new(0, 105,0, 10),
+		Position = UDim2.new(0, 105,0, 30),
 		Theme = {TextColor3 = "Tertiary"},
 		Size = UDim2.new(0, 400,0, 20),
 		BackgroundTransparency = 1,
